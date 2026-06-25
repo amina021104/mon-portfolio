@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="../CSS/por.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="nav_contenu">
+            <div class="logo">Aminata <span>Kounta</span></div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link" data-key="nav_home">Accueil</a></li>
+                <li><a href="#mesprojets" class="nav-link" data-key="nav_projects">Projets</a></li>
+                <li><a href="#competences" class="nav-link" data-key="nav_skills">Compétences</a></li>
+                <li><a href="#stats" class="nav-link" data-key="nav_stats">Chiffres</a></li>
+                <li><button id="theme-toggle" class="theme-btn" data-key="dark_mode">🌙 Mode sombre</button></li>
+                <li><button id="lang-toggle" class="theme-btn" style="background: #1a5f8f;">🇫🇷 FR</button></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+        </div>
+    </nav>
+</header>
+
+<section class="section" id="home">
+    <div class="section_contenu">
+        <div class="contenu">
+            <div class="badge" data-key="badge">📍 Thiès, Sénégal</div>
+            <h1 class="titre" data-key="title">
+                Mon <span>Portfolio</span>
+            </h1>
+            <p class="sous-titre" data-key="subtitle">Création de solutions géospatiales innovantes</p>
+            <p class="Presentation" data-key="presentation">
+                Titulaire d'un baccalauréat scientifique (S2) obtenu en 2024 au lycée Ababacar Sy de Tivaouane,
+                je poursuis actuellement une licence en Géomatique. Passionnée par l'ingénierie et l'innovation,
+                j'oriente mon parcours vers les technologies géospatiales et le développement web.
+            </p>
+            <div class="Liens">
+                <a href="mailto:Aminata021104@gmail.com" data-key="email_link">📧 Email</a>
+                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile#:~:text=www.linkedin.com/in/" target="_blank" data-key="linkedin_link">🔗 LinkedIn</a>
+            </div>
+            <div class="action_btn">
+                <button class="Me_contacter" id="meContacterBtn" data-key="contact_me">📩 Me contacter</button>
+                <button class="portfolio" id="voirProfilBtn" data-key="view_profile">📄 Voir mon profil</button>
+            </div>
+        </div>
+        <div class="Image">
+            <div class="image-wrapper">
+                <img src="../Image/mapho.jpeg" alt="Aminata Kounta" onerror="this.src='https://via.placeholder.com/350x350?text=Aminata'">
+                <div class="online-badge" data-key="available">● Disponible</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" style="display: none;">
+        <h2 data-key="contact_title">✉️ Contactez-moi</h2>
+        <form class="styled-form" id="contactForm">
+            <div class="form-group">
+                <label for="nom" data-key="name_label">Nom complet</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom" required data-key="name_placeholder">
+            </div>
+            <div class="form-group">
+                <label for="email" data-key="email_label">Email</label>
+                <input type="email" id="email" name="email" placeholder="Votre email" required data-key="email_placeholder">
+            </div>
+            <div class="form-group">
+                <label for="message" data-key="message_label">Message</label>
+                <textarea id="message" name="message" placeholder="Votre message" rows="4" required data-key="message_placeholder"></textarea>
+            </div>
+            <button type="submit" class="submit-btn" data-key="send_btn">Envoyer le message</button>
+        </form>
+        <p id="formFeedback"></p>
+    </div>
+
+    <div id="infosContainer" style="display: none;">
+        <!-- Langues -->
+        <div id="langues">
+            <h2 data-key="languages_title">🌍 Langues parlées</h2>
+            <div class="langue"><span data-key="french">Français</span><div class="progress"><div class="progress-bar" style="width:95%">95%</div></div></div>
+            <div class="langue"><span data-key="english_lang">Anglais</span><div class="progress"><div class="progress-bar" style="width:65%">65%</div></div></div>
+            <div class="langue"><span data-key="spanish">Espagnol</span><div class="progress"><div class="progress-bar" style="width:40%">40%</div></div></div>
+        </div>
+
+        <!-- Parcours académique -->
+        <div id="education">
+            <h2 data-key="education_title">🎓 Parcours académique</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date" data-key="current_date">2024 - Présent</div>
+                    <div class="timeline-content">
+                        <h3 data-key="geomatics_degree">Licence en Géomatique</h3>
+                        <p data-key="ufr">UFR des Sciences de l'Ingénieur</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h3 data-key="bac_degree">Baccalauréat Scientifique (S2)</h3>
+                        <p data-key="highschool">Lycée Ababacar Sy de Tivaouane | Mention Assez Bien</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Centres d'intérêt -->
+        <div id="interests">
+            <h2 data-key="interests_title">💫 Centres d'intérêt</h2>
+            <div class="interests-grid">
+                <div class="interest-card" data-key="interest1">🗺️ Cartographie numérique</div>
+                <div class="interest-card" data-key="interest2">📱 Innovation technologique</div>
+                <div class="interest-card" data-key="interest3">🌍 SIG & environnement</div>
+                <div class="interest-card" data-key="interest4">💻 Développement web</div>
+                <div class="interest-card" data-key="interest5">📊 Data visualisation</div>
+                <div class="interest-card" data-key="interest6">🤝 Travail collaboratif</div>
+            </div>
+        </div>
+
+        <div id="objectives">
+            <h2 data-key="objectives_title">🎯 Objectifs professionnels</h2>
+            <p data-key="objectives_text">À court terme, je souhaite approfondir mes compétences en SIG et en développement web pour créer des solutions innovantes. À long terme, j'aspire à contribuer à des projets d'aménagement territorial et de gestion environnementale en tant qu'ingénieure géomaticienne.</p>
+        </div>
+
+        <div id="cv">
+            <h2 data-key="cv_title">📄 Mon CV</h2>
+            <p data-key="cv_text">Téléchargez mon CV pour découvrir mon parcours complet.</p>
+            <button class="btn-cv" id="downloadCvBtn" onclick="genererCV()" data-key="cv_download">
+                📥 Télécharger mon CV (PDF)
+            </button>
+        </div>
+        <div id="availability">
+            <h3>📅 Disponibilité</h3>
+           <div class="availability-badge" style="background: #28a745; color: white; padding: 8px 20px; border-radius: 30px; display: inline-block;">
+            Disponible pour un stage à partir du mois de Juillet 2026
+        </div>
+    </div>
+    </div>
+</section>
+
+<section id="mesprojets">
+    <div class="section">
+        <div class="section-header">
+            <h2 class="projets" data-key="projects_title">🚀 Mes projets</h2>
+            <div class="projet-stats" data-key="projects_count">
+                <span>06 projets réalisés</span>
+            </div>
+        </div>
+        <div class="lespro">
+            <a href="../HTML/boutique.html" class="cartep1" target="_blank">
+                <div class="card-icon">
+                    <img src="../Image/logogmt.jpeg" alt="Boutique" class="projet-logo">
+                </div>
+                <div class="numero">01</div>
+                <h3 data-key="project1_title">Boutique en ligne</h3>
+                <p data-key="project1_desc">Site e-commerce responsive avec panier interactif</p>
+                <div class="tech-stack">
+                    <span>HTML</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                </div>
+                <span class="voir-projet-btn" data-key="view_project">Voir le projet →</span>
+            </a>
+
+            <a href="../assets/word/projet trafic routier L2.docx" class="cartep1" target="_blank">
+                <div class="card-icon">
+                    <img src="../Image/QGIS.jpeg" alt="QGIS" class="projet-logo">
+                </div>
+                <div class="numero">02</div>
+                <h3 data-key="project2_title">Méthode de collecte et d'analyse de données</h3>
+                <p data-key="project2_desc">Rapport sur le trafic routier dans la région de Thiès</p>
+                <div class="tech-stack">
+                    <span>QGIS</span>
+                    <span>Kobotolbox</span>
+                    <span>Kobocollect</span>
+                </div>
+                <span class="voir-projet-btn" data-key="view_project">Voir le projet →</span>
+            </a>
+
+            <a href="../HTML/priere.html" class="cartep1" target="_blank">
+                <div class="card-icon">
+                    <img src="../Image/JS.jpeg" alt="Horaires de prière" class="projet-logo">
+                </div>
+                <div class="numero">03</div>
+                <h3 data-key="project3_title">Site pour les heures de prières</h3>
+                <p data-key="project3_desc">Site créé avec HTML, CSS, JS pour les heures de prières selon la position géographique</p>
+                <div class="tech-stack">
+                    <span>HTML / CSS / JS</span>
+                    <span>Adhan API</span>
+                    <span>Geolocation API</span>
+                </div>
+                <span class="voir-projet-btn" data-key="view_project">Voir le projet →</span>
+            </a>
+
+            <a href="../Image/cartetp.png" class="cartep1" target="_blank">
+                <div class="card-icon">
+                    <img src="../Image/ArcGIS.jpeg" alt="Cartographie" class="projet-logo">
+                </div>
+                <div class="numero">04</div>
+                <h3 data-key="project4_title">Cartographie thématique</h3>
+                <p data-key="project4_desc">Création de cartes thématiques</p>
+                <div class="tech-stack">
+                    <span>QGIS</span>
+                    <span>ArcGIS</span>
+                </div>
+                <span class="voir-projet-btn" data-key="view_project">Voir le projet →</span>
+            </a>
+
+            <a href="../HTML/carte.html" class="cartep1" target="_blank">
+                <div class="card-icon">
+                    <img src="../Image/QGIS.jpeg" alt="Dashboard" class="projet-logo">
+                </div>
+                <div class="numero">05</div>
+                <h3 data-key="project5_title">Géolocalisation</h3>
+                <p data-key="project5_desc">Carte des Établissements Scolaires de la région de Dakar</p>
+                <div class="tech-stack">
+                    <span>QGIS</span>
+                    <span>Nominatim API</span>
+                    <span>VS Code</span>
+                </div>
+                <span class="voir-projet-btn" data-key="view_project">Voir le projet →</span>
+            </a>
+
+            <a href="../Image/video.jpeg.mp4" class="cartep1" target="_blank">
+                <div class="card-icon">
+                    <img src="../Image/AutoCAD.jpeg" alt="Application mobile" class="projet-logo">
+                </div>
+                <div class="numero">06</div>
+                <h3 data-key="project6_title">Projet sur l'implantation et le nivellement</h3>
+                <p data-key="project6_desc">Travail pratique sur le terrain pour faire un nivellement et implantation afin de réaliser un plan topographie</p>
+                <div class="tech-stack">
+                    <span>Matériels topographiques</span>
+                    <span>AutoCAD</span>
+                    <span>Covadis 2D</span>
+                </div>
+                <span class="voir-projet-btn" data-key="view_project">Voir le projet →</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Section Compétences -->
+<section id="competences">
+    <div class="section">
+        <div class="section-header">
+            <h2 class="competences" data-key="skills_title">💡 Mes Compétences</h2>
+            <div class="skills-count" data-key="skills_count">
+                <span>15+ compétences maîtrisées</span>
+            </div>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3 data-key="skills_gis">🗺️ SIG & Géomatique</h3>
+                <div class="skills-list">
+                    <div class="skill-item" data-skill="90"><span>QGIS</span><div class="skill-bar"><div class="skill-fill"></div></div><span class="skill-percent">0%</span></div>
+                    <div class="skill-item" data-skill="85"><span>ArcGIS</span><div class="skill-bar"><div class="skill-fill"></div></div><span class="skill-percent">0%</span></div>
+                    <div class="skill-item" data-skill="80"><span>AutoCAD</span><div class="skill-bar"><div class="skill-fill"></div></div><span class="skill-percent">0%</span></div>
+                    <div class="skill-item" data-skill="65"><span>MySQL</span><div class="skill-bar"><div class="skill-fill"></div></div><span class="skill-percent">0%</span></div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3 data-key="skills_web">💻 Développement web</h3>
+                <div class="skills-list">
+                    <div class="skill-item" data-skill="85"><span>HTML/CSS</span><div class="skill-bar"><div class="skill-fill"></div></div><span class="skill-percent">0%</span></div>
+                    <div class="skill-item" data-skill="80"><span>JavaScript</span><div class="skill-bar"><div class="skill-fill"></div></div><span class="skill-percent">0%</span></div>
+                    <div class="skill-item" data-skill="75"><span>Python</span><div class="skill-bar"><div class="skill-fill"></div></div><span class="skill-percent">0%</span></div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3 data-key="skills_data">📊 Analyse de données</h3>
+                <div class="skills-list">
+                    <div class="skill-item" data-skill="85"><span>Excel avancé</span><div class="skill-bar"><div class="skill-fill"></div></div><span class="skill-percent">0%</span></div>
+                    <div class="skill-item" data-skill="70"><span>Topographie</span><div class="skill-bar"><div class="skill-fill"></div></div><span class="skill-percent">0%</span></div>
+                    <div class="skill-item" data-skill="65"><span>Word</span><div class="skill-bar"><div class="skill-fill"></div></div><span class="skill-percent">0%</span></div>
+                    <div class="skill-item" data-skill="75"><span>SQL</span><div class="skill-bar"><div class="skill-fill"></div></div><span class="skill-percent">0%</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="stats">
+    <div class="section">
+        <h2 class="stats-title" data-key="stats_title">📊 Chiffres-clés</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" data-count="6">0</div>
+                <div class="stat-label" data-key="stats_projects">Projets réalisés</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-count="15">0</div>
+                <div class="stat-label" data-key="stats_skills">Compétences maîtrisées</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-count="8">0</div>
+                <div class="stat-label" data-key="stats_software">Logiciels SIG</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-count="5">0</div>
+                <div class="stat-label" data-key="stats_languages">Langages</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-contenu">
+        <div class="footer-col">
+            <h3 data-key="footer_name">Aminata Kounta</h3>
+            <p data-key="footer_title">Géomaticienne</p>
+            <div class="social-links">
+                <a href="mailto:Aminata021104gmail.com">📧</a>
+                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile#:~:text=www.linkedin.com/in/">🔗</a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h3 data-key="footer_nav">Navigation</h3>
+            <ul>
+                <li><a href="#home" data-key="nav_home_footer">Accueil</a></li>
+                <li><a href="#mesprojets" data-key="nav_projects_footer">Projets</a></li>
+                <li><a href="#competences" data-key="nav_skills_footer">Compétences</a></li>
+                <li><a href="#stats" data-key="nav_stats_footer">Chiffres</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3 data-key="footer_contact">Contact</h3>
+            <p>📞 +221 78 560 85 69</p>
+            <p>📧 aminata021104@gmail.com</p>
+        </div>
+    </div>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://tonportfolio.com" alt="QR Code">
+    <div class="footer-bottom" data-key="footer_copyright">
+        &copy; 2026 Aminata Kounta - Portfolio Géomatique
+    </div>
+</footer>
+
+<div id="modalProjet" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div id="modal-body"></div>
+    </div>
+</div>
+
+<script src="../JS/por.js"></script>
+</body>
+</html>
